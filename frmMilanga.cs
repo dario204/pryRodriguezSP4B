@@ -33,12 +33,15 @@ namespace pryRodriguezSP4B
         private void btnValidar_Click(object sender, EventArgs e)
         {
             int i= 0;
-           
-            for ( i = 1; i < 5; i++)
+            int j = 0;
+            for ( i = 0; i < 5; i++)
             {
-                if (i.)
+                for ( j = 0; j < 4; j++)
                 {
+                    if (dgvMozos[i,j] >=0 && dgvMozos.Rows.Count != -)
+                    {
 
+                    }
                 }
             }
         }
