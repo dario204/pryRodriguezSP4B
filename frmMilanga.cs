@@ -24,12 +24,16 @@ namespace pryRodriguezSP4B
         private void frmMilanga_Load(object sender, EventArgs e)
         {
             
-            dgvMozos.Rows.Insert(0, "Julio");
-            dgvMozos.Rows.Insert(1, "Esteban");
-            dgvMozos.Rows.Insert(2, "Javier");
-            dgvMozos.Rows.Insert(3, "Gonzalo");
-            dgvMozos.Rows.Insert(4, "Alberto");
-            dgvMozos.Columns[0].ReadOnly= true;
+            for (int i = 0; i < 5; i++)
+            {
+                dgvMozos.Rows.Add();
+            }
+            dgvMozos.Rows[0].Cells[0].Value = "Julio";
+            dgvMozos.Rows[1].Cells[0].Value = "Esteban";
+            dgvMozos.Rows[2].Cells[0].Value = "Javier";
+            dgvMozos.Rows[3].Cells[0].Value = "Gonzalo";
+            dgvMozos.Rows[4].Cells[0].Value = "Alberto";
+            dgvMozos.Columns[0].ReadOnly = true;
         }
 
         private void btnValidar_Click(object sender, EventArgs e)
@@ -42,7 +46,7 @@ namespace pryRodriguezSP4B
             {
                 for (columna = 0; columna < 4; columna++)
                 {
-                    if (dgvMozos.Rows[fila].Cells[columna].Value == null)
+                    if (dgvMozos.Rows[fila].Cells[columna].Value == null || dgvMozos.Rows[fila].Cells[columna].Value=="")
                     {
                         i++;
                     }
@@ -53,11 +57,11 @@ namespace pryRodriguezSP4B
             {
                 fila = 0;
                 columna = 1;
-                while (columna<= 4)
+                while (fila<= 4)
                 {
-                    while (fila<=4 && colmat<=matMozos.GetLength(1))
+                    while (columna<=4 && colmat<=matMozos.GetLength(1))
                     {
-                        matMozos[fila, colmat] = Int32.Parse((string)dgvMozos.Rows[fila].Cells[columna].Value);
+                        matMozos[fila, colmat] = Convert.ToInt32(dgvMozos.Rows[fila].Cells[columna].Value);
                         colmat++;
                         columna++;
                     }
@@ -74,6 +78,8 @@ namespace pryRodriguezSP4B
                 btnMozo.Enabled = false;
                 MessageBox.Show("solo números", "alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+           
+            
         }
 
         private void btnMozo_Click(object sender, EventArgs e)
@@ -83,11 +89,64 @@ namespace pryRodriguezSP4B
             int suma = 0;
             int mozo = 0;
             int mayor = 0;
-            for (fila = 0; fila < 4; fila++)
+            while (fila<matMozos.GetLength(0))
             {
-                for (columna = 0; columna < 4; columna++)
+                while (columna<matMozos.GetLength(1))
                 {
+                    suma = suma + matMozos[fila, columna];
+                    columna++;
+                }
+                columna = 0;
+                fila++;
+                suma = 0;
+                vecTotales[fila] = suma;
 
+            }
+            fila = 0;
+            mayor = vecTotales[0];
+            for (fila = 0;fila < 4; fila++)
+            {
+                if (vecTotales[fila]>=mayor)
+                {
+                    mayor = vecTotales[fila];
+                    mozo = fila;
+                }
+            }
+            if (mozo==0)
+            {
+                lblMozo.Text = "Julio";
+                lblTotal.Text=mayor.ToString();
+            }
+            else
+            {
+                if (mozo==1)
+                {
+                    lblMozo.Text = "Esteban";
+                    lblTotal.Text = mayor.ToString();
+                }
+                else
+                {
+                    if (mozo==2)
+                    {
+                        lblMozo.Text = "Javier";
+                        lblTotal.Text = mayor.ToString();
+                    }
+                    else
+                    {
+                        if (mozo==3)
+                        {
+                            lblMozo.Text = "Gonzalo";
+                            lblTotal.Text = mayor.ToString();
+                        }
+                        else
+                        {
+                            if (mozo==4)
+                            {
+                                lblMozo.Text = "Alberto";
+                                lblTotal.Text = mayor.ToString();
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -39,8 +39,7 @@
             this.lblMozo = new System.Windows.Forms.Label();
             this.btnTotales = new System.Windows.Forms.Button();
             this.rtbTotal = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMozos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +57,7 @@
             this.dgvMozos.Name = "dgvMozos";
             this.dgvMozos.RowHeadersWidth = 51;
             this.dgvMozos.RowTemplate.Height = 24;
-            this.dgvMozos.Size = new System.Drawing.Size(860, 365);
+            this.dgvMozos.Size = new System.Drawing.Size(840, 302);
             this.dgvMozos.TabIndex = 0;
             // 
             // Column1
@@ -108,7 +107,7 @@
             // 
             // btnMozo
             // 
-            this.btnMozo.Location = new System.Drawing.Point(12, 481);
+            this.btnMozo.Location = new System.Drawing.Point(12, 421);
             this.btnMozo.Name = "btnMozo";
             this.btnMozo.Size = new System.Drawing.Size(135, 69);
             this.btnMozo.TabIndex = 2;
@@ -119,15 +118,15 @@
             // lblMozo
             // 
             this.lblMozo.AutoSize = true;
-            this.lblMozo.Location = new System.Drawing.Point(181, 499);
+            this.lblMozo.Location = new System.Drawing.Point(191, 447);
             this.lblMozo.Name = "lblMozo";
-            this.lblMozo.Size = new System.Drawing.Size(10, 16);
+            this.lblMozo.Size = new System.Drawing.Size(89, 16);
             this.lblMozo.TabIndex = 3;
-            this.lblMozo.Text = ".";
+            this.lblMozo.Text = "nombre mozo";
             // 
             // btnTotales
             // 
-            this.btnTotales.Location = new System.Drawing.Point(522, 481);
+            this.btnTotales.Location = new System.Drawing.Point(527, 421);
             this.btnTotales.Name = "btnTotales";
             this.btnTotales.Size = new System.Drawing.Size(113, 69);
             this.btnTotales.TabIndex = 4;
@@ -136,37 +135,27 @@
             // 
             // rtbTotal
             // 
-            this.rtbTotal.Location = new System.Drawing.Point(697, 452);
+            this.rtbTotal.Location = new System.Drawing.Point(677, 398);
             this.rtbTotal.Name = "rtbTotal";
             this.rtbTotal.Size = new System.Drawing.Size(175, 152);
             this.rtbTotal.TabIndex = 5;
             this.rtbTotal.Text = "";
             // 
-            // label1
+            // lblTotal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(181, 572);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(184, 647);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "label2";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(191, 510);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(32, 16);
+            this.lblTotal.TabIndex = 6;
+            this.lblTotal.Text = "total";
             // 
             // frmMilanga
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 708);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.rtbTotal);
             this.Controls.Add(this.btnTotales);
             this.Controls.Add(this.lblMozo);
@@ -195,8 +184,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Postres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.RichTextBox rtbTotal;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTotal;
     }
 }
 
