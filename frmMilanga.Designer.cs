@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMilanga));
             this.dgvMozos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +57,7 @@
             // dgvMozos
             // 
             this.dgvMozos.AllowUserToAddRows = false;
+            this.dgvMozos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgvMozos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMozos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -107,22 +109,24 @@
             // 
             // btnValidar
             // 
+            this.btnValidar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnValidar.Location = new System.Drawing.Point(909, 128);
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(140, 57);
             this.btnValidar.TabIndex = 1;
             this.btnValidar.Text = "Validar Datos";
-            this.btnValidar.UseVisualStyleBackColor = true;
+            this.btnValidar.UseVisualStyleBackColor = false;
             this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 
             // btnMozo
             // 
+            this.btnMozo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMozo.Location = new System.Drawing.Point(12, 351);
             this.btnMozo.Name = "btnMozo";
             this.btnMozo.Size = new System.Drawing.Size(135, 69);
             this.btnMozo.TabIndex = 2;
             this.btnMozo.Text = "Mozo del Dia";
-            this.btnMozo.UseVisualStyleBackColor = true;
+            this.btnMozo.UseVisualStyleBackColor = false;
             this.btnMozo.Click += new System.EventHandler(this.btnMozo_Click);
             // 
             // lblMozo
@@ -136,12 +140,13 @@
             // 
             // btnTotales
             // 
+            this.btnTotales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnTotales.Location = new System.Drawing.Point(529, 351);
             this.btnTotales.Name = "btnTotales";
             this.btnTotales.Size = new System.Drawing.Size(113, 69);
             this.btnTotales.TabIndex = 4;
             this.btnTotales.Text = "Totales";
-            this.btnTotales.UseVisualStyleBackColor = true;
+            this.btnTotales.UseVisualStyleBackColor = false;
             this.btnTotales.Click += new System.EventHandler(this.btnTotales_Click);
             // 
             // lblTotal
@@ -235,18 +240,20 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSalir.Location = new System.Drawing.Point(1020, 677);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(138, 63);
             this.btnSalir.TabIndex = 17;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmMilanga
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1188, 752);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtPostres);
@@ -265,6 +272,7 @@
             this.Controls.Add(this.btnMozo);
             this.Controls.Add(this.btnValidar);
             this.Controls.Add(this.dgvMozos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMilanga";
             this.Text = "Bar Milanga";
             this.Load += new System.EventHandler(this.frmMilanga_Load);
