@@ -160,21 +160,21 @@ namespace pryRodriguezSP4B
             int suma = 0;
             int i = 5;
             int total = 0;
-            while (columna < matMozos.GetLength(1) && i <= 9) //gira en la matriz para ir sumando los importes
+            while (columna < matMozos.GetLength(1) && i <= 9) 
             {
-                suma = 0; //reinicia cada categoria
+                suma = 0; 
                 while (fila < matMozos.GetLength(0))
                 {
-                    suma = suma + matMozos[fila, columna]; //suma el valor de la matriz
+                    suma = suma + matMozos[fila, columna]; 
                     fila++;
                 }
-                vecTotales[i] = suma; //escribe el vector con el valor de la matriz
-                total = total + suma; //suma el valor a la variable TOTAL
+                vecTotales[i] = suma; 
+                total = total + suma; 
                 fila = 0;
                 columna++;
-                i++; //gira en las demas posiciones del vector VecTotales
+                i++; 
             }
-            vecTotales[9] = total; //en la ultima posicion se escribe el importe FINAL
+            vecTotales[9] = total; 
 
             txtComida.Text = Convert.ToString(vecTotales[5]);
             txtBebidasSin.Text = Convert.ToString(vecTotales[6]);
